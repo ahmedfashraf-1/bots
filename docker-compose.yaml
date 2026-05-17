@@ -1,0 +1,9 @@
+services:
+  my-bot:
+    build: .
+    container_name: my-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/app/logs
